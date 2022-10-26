@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue Hello</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <img :src="imgSrc" />
+    </div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+        imgSrc: 'https://picsum.photos/id/1069/800/600',
+      }
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>
